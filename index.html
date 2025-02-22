@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Turismo Verde - Experiencias Naturales</title>
+    <link rel="stylesheet" href="estilos/style.css">
+</head>
+<body>
+
+    <script>
+        window.addEventListener('mouseover', initLandbot, { once: true });
+        window.addEventListener('touchstart', initLandbot, { once: true });
+        var myLandbot;
+        function initLandbot() {
+          if (!myLandbot) {
+            var s = document.createElement('script');
+            s.type = "module"
+            s.async = true;
+            s.addEventListener('load', function() {
+              var myLandbot = new Landbot.Livechat({
+                configUrl: 'https://storage.googleapis.com/landbot.online/v3/H-2798475-RO918P5QZ9EMUP7F/index.json',
+              });
+            });
+            s.src = 'https://cdn.landbot.io/landbot-3/landbot-3.0.0.mjs';
+            var x = document.getElementsByTagName('script')[0];
+            x.parentNode.insertBefore(s, x);
+          }
+        }
+        </script>
+
+
+    <nav>
+        <div class="nav-container">
+            <div class="logo">TURISMO VERDE</div>
+            <div class="nav-links">
+                <a href="#">Inicio</a>
+                <a href="#">Destinos</a>
+                <a href="#">Tours</a>
+                <a href="#">Nosotros</a>
+                <a href="#contacto">Contacto</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Descubre la Naturaleza</h1>
+            <p>Explora los destinos más hermosos y sostenibles del mundo con nuestros tours especializados en ecoturismo y aventuras naturales.</p>
+            <a href="#tours" class="cta-button">Ver Nuestros Tours</a>
+        </div>
+    </section>
+</body>
+</html>
